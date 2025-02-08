@@ -1,0 +1,410 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: #999;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #e40046;
+    border-radius: 15px;
+}
+#Acceuil {
+  /* min-height: 98vh; */
+  padding:10px 8%;
+  width: 100%;
+}
+section{
+    padding: 70px 8%;
+}
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  margin-bottom: 12px;
+  top: 0;
+  left: 0;
+  width: 100%;  
+  position: fixed;
+  padding:5px 8%;
+  z-index: 100; 
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: Animation .5s 1.6s ease-out forwards;
+}
+.Navbar p{
+   font-weight: bold;
+   font-size: 24px;
+}
+.Navbar p a{
+    text-decoration: none;
+    color: #000;
+ }
+.Navbar p span{
+    color:#e40046;
+}
+
+.link ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul li{
+    list-style: none;
+    padding: 10px 25px;
+    list-style: none;
+}
+ul li a{
+   text-decoration: none;
+   color: #999;
+   font-size: 14px;
+   transition: .4s all;
+}
+ul li a:hover{
+    background-color: #e40046;
+    padding: 14px;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #000;
+
+}
+.menu{
+    display: none;
+}
+.menu i{
+    cursor: pointer;
+    width: 12px;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5rem;
+}
+.home .left{
+    position: relative;
+    height: 500px;
+    width: 600px;
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: Animation .8s 1s ease-out forwards;
+}
+.home .left img{
+    position: absolute;
+    object-fit: cover;
+    border: 8px solid #fff;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, .2);
+    border-radius: 2rem;
+}
+.home .Img-left-1{
+    height: 400px;
+    width: 450px;
+    transition: .5s;
+}
+.home .Img-left-1:hover{
+    transform: scale(1.1) rotate(10deg);
+}
+
+.home .Img-left-2{
+    height: 350px;
+    width: 350px;
+    transition: .5s;
+    top: 150px;
+    left: 250px;
+}
+.home .Img-left-2:hover{
+    transform: scale(1.1) rotate(10deg);
+}
+.btn button{
+    display: block;
+    padding: 15px 30px;
+    font-weight: bold;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, .2);
+    border-radius: 30px;
+    border: 2px solid #e40046;
+    background-color: #e40046;
+    cursor: pointer;
+   transition: .5s;
+   margin-right: 160px;
+}
+.btn button a{
+    text-decoration: none;
+    color: #000;
+}
+
+.btn button:hover{
+    background-color: #f1f1f1;
+    transform: rotate(5deg);
+}
+.right{
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateX(30px);
+    animation: Animation .8s 1.2s ease-out forwards;
+}
+.right .text-right{
+    font-weight: bold;
+    color: #e40046;
+}
+.right h1{
+    margin: 10px 0;
+    line-height: 50px;
+    font-size: 34px;
+    font-weight: bold;
+}
+.right p{
+    width: 60%;
+    font-size: 16px;
+    color: #999;
+    margin-bottom: 20px;
+}
+
+#MaPassion h1{
+    margin-bottom: 14px;
+     margin-top: 3%;
+}
+
+#MaPassion h1 span{
+    color: #e40046;
+}
+
+#MaPassion p{
+    font-size: 14px;
+    color: #999;
+}
+
+.gallery{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 55px;
+    flex-wrap: wrap;
+}
+.gallery .cards{
+    width: 24%;
+    height:auto;
+    border-radius: 2rem;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, .2);
+    overflow: hidden;
+    background-color: #fff;
+    position: relative;
+    cursor: pointer;
+    padding: 20px;
+}
+.gallery .cards img{
+    object-fit: cover;
+    border-radius: 1rem;
+    transition: .5s;
+    height: 100%;
+    width: 100%;
+}
+
+.gallery .cards .description{
+    transform: translateY(340px);
+    background-color: #fff;
+    text-align: center;
+    transition: .5s;
+
+}
+
+.gallery .cards .description h1{
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+.gallery .cards .description p{
+    font-size: 14px;
+    color: #999;
+}
+.gallery .cards:hover .description{
+    transform: translateY(-120px);
+  
+}
+.gallery .cards:hover img{
+    transform: translateY(-120px);
+  
+}
+
+
+
+
+
+
+#AproposDeMoi{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5rem;
+}
+#AproposDeMoi .AproposDeMoi-left{
+    position: relative;
+    height: 500px;
+    width: 600px;
+    margin-top: 5rem;
+}
+#AproposDeMoi .AproposDeMoi-left img{
+    position: absolute;
+    object-fit: cover;
+    border: 8px solid #fff;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, .2);
+    border-radius: 2rem;
+}
+#AproposDeMoi .Img-left-1{
+    height: 400px;
+    width: 450px;
+    transition: .5s;
+}
+#AproposDeMoi .Img-left-1:hover{
+    transform: scale(1.1) rotate(10deg);
+}
+
+
+.right{
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    flex-direction: column;
+    opacity: 0;
+}
+.text-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+#AproposDeMoi .right h3{
+    font-weight: bold;
+    color: #000;
+
+}
+#AproposDeMoi .right span{
+    color: #e40046;
+
+}
+
+.right .Info{
+    font-size: 16px;
+    color: #999;
+    margin-top: 13px;
+    display: inline-block;
+    
+}
+
+footer{
+    padding: 20px 0;
+    background-color: #f1f1f1;
+    border-radius: 45px 45px 0 0;
+    text-align: center;
+}
+.footer_logo p{
+    font-weight: bold;
+    font-size: 24px;
+    cursor: pointer;
+ }
+ .footer_logo p a{
+    text-decoration: none;
+    color: #000;
+ }
+ .footer_logo p span{
+     color:#e40046;
+ }
+ 
+.footer_contenaire{
+    font-size: 14px;
+    color: #999;
+}
+.footer_contenaire span{
+    color: #e40046;
+}
+@keyframes Animation {
+    100%{
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+@media (max-width: 850px) {
+    .link ul{
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: #f1f1f1;
+        overflow: hidden;
+        transition: all .5s ease-out;
+
+    }
+    .menu{
+        display: block;
+    }
+    section{
+        flex-direction: column;
+        height: auto;
+        display: flex;
+    }
+
+    .left{
+        width: 100%;
+        padding: 5% 30px;
+        flex: 2;
+        display: none;
+    }
+    .right{
+        width: 100%;
+        padding: 5% 30px;
+    }
+
+
+    .home .Img-left-1{
+        height: 300px;
+        width: 350px;
+    }
+    
+    .home .Img-left-2{
+        height: 200px;
+        width: 200px;
+        transition: .5s;
+        top: 150px;
+        left: 250px;
+    }
+    .gallery{
+        align-content: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .gallery .cards{ 
+        height: auto;
+        width: 80%;
+    }
+    .gallery .cards img{
+        height: 100%;
+        width: 100%;
+    }
+    #AproposDeMoi{
+        flex-direction: column;
+        align-items: center;
+    }
+    #AproposDeMoi .AproposDeMoi-left{
+        width: 100%;
+    }
+}
